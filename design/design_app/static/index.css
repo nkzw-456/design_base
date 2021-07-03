@@ -1,0 +1,48 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.spacer {
+    height: 20px;
+}
+
+
+.main {
+    background-color: rgb(151, 194, 255);
+    width: 600px;
+    margin: 0 auto;
+}
+
+.new-add {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.top-text {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.partition {
+    height: 20px;
+    border: solid 1px grey;
+    background: grey;
+}
+
+.num-list {
+    background: white;
+}
+
+.footer {
+    background-color: rgb(151, 194, 255);
+    width: 600px;
+    margin: 0 auto;
+    height: 50px;
+}

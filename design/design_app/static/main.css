@@ -1,0 +1,161 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.main {
+    background-color: rgb(151, 194, 255);
+    width: 600px;
+    margin: 0 auto;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.circle-img {
+    
+}
+
+.circle-center {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: blue;
+    margin: 10px auto;
+}
+
+.text-items {
+    text-align: center;
+}
+
+.fa-5 {
+    font-size: 2em;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-item {
+    width: 20%;
+    background: white;
+    border-radius: 10px;
+}
+
+.icon-item p {
+    text-align: center;
+}
+
+.number-container {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.number-container:hover {
+    background: rgb(151, 194, 255);
+}
+
+.number-container p {
+    margin-left: 10px;
+}
+
+.email-container {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.email-container p {
+    margin-left: 10px
+}
+
+.email-container:hover {
+    background: rgb(151, 194, 255);
+}
+
+.memo-container {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.memo-container p {
+    margin-left: 10px;
+}
+
+.memo-container:hover {
+    background: rgb(151, 194, 255);
+}
+
+.sub-function {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.sub-function p {
+    padding: 0px 10px;
+}
+
+.border-slice {
+    border: solid 0.5px grey;
+    margin: 0px 10px;
+}
+
+
+.emergency-call {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.emergency-call p {
+    margin-left: 10px;
+}
+
+.myinfo-share {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.myinfo-share p {
+    margin-left: 10px;
+}
+
+.call-rejection {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.call-rejection p {
+    margin-left: 10px;
+}
