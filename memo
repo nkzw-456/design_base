@@ -1,2 +1,12 @@
 db: id kinn
     pass kinn
+    <!--{{ form.as_p|add_class:'class-name' }}-->
+
+createsuperuser　→　user名:kinn, メールアドレス:kinn@example.com, passwprd:kinn
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />

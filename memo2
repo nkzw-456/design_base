@@ -1,0 +1,65 @@
+delete画面一時保存
+
+{% load static %}
+{% load widget_tweaks %}
+{% load bootstrap4 %}
+{% extends 'post_form.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'edit.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="top-bar">
+            <a href="{% url 'index' %}">キャンセル</a>
+            <button type='submit' class='btn btn-outline-primary'>登録</button>
+        </div>
+
+        <div class='image-cicle'>
+            <div class='circle'></div>
+            <a href='#' class="circle-text">写真を追加</a>
+        </div>
+
+        <div>
+            <div class='edit_container'>
+                <div>{{ object.first_name }}</div>
+                <div class="border"></div>
+                <div>{{ form.first_name_kana|add_class:'edit_form' }}</div>
+                <div class="border"></div>
+                <div>{{ form.last_name|add_class:'edit_form' }}</div>
+                <div class="border"></div>
+                <div>{{ form.last_name_kana|add_class:'edit_form' }}</div>
+                <div class="border"></div>
+                <div>{{ form.call_num|add_class:'edit_form' }}</div>
+                <div class="border"></div>
+                <div>{{ form.address|add_class:'edit_form' }}</div>
+            </div>
+                
+            <div class="paragraph"></div>
+
+            <div class="memo_container">
+                <div>メモ(未実装)</div>
+            </div>
+
+            <div class="paragraph"></div>
+            
+            <form>
+                <div class="delite_container">
+                    {% csrf_token %}
+                    <div>{{ post.first_name }} {{ post.last_name }} を削除しますか？</div>
+                    <input type="submit" value="削除" class="btn btn-link">
+                </div>
+
+                <div class="paragraph"></div>
+            </form>
+
+        </div>
+        
+    </div>
+</body>
+</html>

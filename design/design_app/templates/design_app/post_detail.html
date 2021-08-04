@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "{% static 'main.css' %}">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <title>Document</title>
+    <title>個別ページ</title>
 </head>
 <body>
     <div class="main">
         
         <div class="main-head">
-            <a href="#"> <連絡先 </a>
-            <a href="#">編集</a>
+            <a href="{% url 'index' %}"> <連絡先 </a>
+            <a href="{% url 'update' post.id %}">編集</a>
         </div>
 
         <div class="circle-img">
@@ -22,26 +22,26 @@
         </div>
 
         <div class="text-items">
-            <div class="text-name">東條英機</div>
-            <div class="text-kana">トウジョウヒデキ</div>
+            <div class="text-name">{{ post.first_name }} {{ post.last_name }}</div>
+            <div class="text-kana">{{ post.first_name_kana }} {{ post.last_name_kana }}</div>
         </div>
 
         <div class="icon-container">
             <div class="icon-item">
-                <i class="far fa-comment-dots fa-5"></i>
+                <i class="far fa-comment-dots fa-5"></i><br>
                 <p>メッセージ</p>
             </div>
             <div class="icon-item">
-                <i class="far fa-comment-dots fa-5"></i>
-                <p>メッセージ</p>
+                <i class="far fa-envelope-open fa-5"></i>
+                <p>メール</p>
             </div>
             <div class="icon-item">
-                <i class="far fa-comment-dots fa-5"></i>
-                <p>メッセージ</p>
+                <i class="fas fa-phone-volume fa-5"></i>
+                <p>電話</p>
             </div>
             <div class="icon-item">
-                <i class="far fa-comment-dots fa-5"></i>
-                <p>メッセージ</p>
+                <i class="fas fa-video fa-5"></i>
+                <p>ビデオ</p>
             </div>
         </div>
 
@@ -49,14 +49,14 @@
         
         <div class="number-container">
             <p>携帯電話</p>
-            <p>123 4567 8901</p>
+            <p>{{ post.call_num }}</p>
         </div>
 
         <div class="spacer"></div>
         
         <div class="email-container">
             <p>メールアドレス</p>
-            <p>abc@defghijklmn</p>
+            <p>{{ post.address }}</p>
         </div>
 
         <div class="spacer"></div>
@@ -64,8 +64,7 @@
         <div class="memo-container">
             <p>メモ</p>
             <div class="memo-contents">
-                <p>こんにちは</p>
-                <p>こんばんは</p>
+            <p>{{ post.memo }}</p>
             </div>
         </div>
 
@@ -95,6 +94,12 @@
 
         <div class="call-rejection">
             <p>この発信者を着信拒否</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="delete_function">
+            <a href="{% url 'delete' post.id %}">連絡先を削除</a>
         </div>
 
         <div class="spacer"></div>

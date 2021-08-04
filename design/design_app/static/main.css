@@ -12,7 +12,7 @@ a {
 }
 
 .main {
-    background-color: rgb(151, 194, 255);
+    background-color: rgb(214, 214, 214);
     width: 600px;
     margin: 0 auto;
 }
@@ -21,10 +21,6 @@ a {
     display: flex;
     justify-content: space-between;
     margin: 5px 10px;
-}
-
-.circle-img {
-    
 }
 
 .circle-center {
@@ -39,10 +35,6 @@ a {
     text-align: center;
 }
 
-.fa-5 {
-    font-size: 2em;
-}
-
 .icon-container {
     display: flex;
     justify-content: space-around;
@@ -52,6 +44,9 @@ a {
     width: 20%;
     background: white;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-item p {
@@ -158,4 +153,21 @@ a {
 
 .call-rejection p {
     margin-left: 10px;
+}
+
+.delete_function {
+    border: solid 1px white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+}
+
+.delete_function {
+    padding: 16px 0px;
+}
+
+.delete_function a {
+    margin-left: 10px;
+    display: block;
 }

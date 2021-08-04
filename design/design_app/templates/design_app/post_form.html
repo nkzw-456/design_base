@@ -1,0 +1,58 @@
+{% load static %}
+{% load widget_tweaks %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'edit.css' %}">
+    <title>新規作成ページ</title>
+</head>
+<body>
+    <form method="Post">
+        <div class="main">
+            <div class="top-bar">
+                <a href="{% url 'index' %}">キャンセル</a>
+                    {% csrf_token %}
+                    <input type='submit' value="登録" class='btn btn-primary'></input>
+            
+            </div>
+
+            <div class='image-cicle'>
+                <div class='circle'></div>
+                <a href='#' class="circle-text">写真を追加</a>
+            </div>
+
+            <div>
+                <form method="Post">
+                {% block update %}
+                {% csrf_token %}
+                <div class='edit_container'>
+                    <div>{{ form.first_name|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.first_name_kana|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.last_name|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.last_name_kana|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.call_num|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.address|add_class:'edit_form' }}</div>
+                    <div class="border"></div>
+                    <div>{{ form.memo|add_class:'memo_form' }}</div>
+                </div>
+                </form>
+                
+                <div class="paragraph"></div>
+                {% endblock %}
+                <div class="paragraph"></div>
+
+            </div>
+    
+        </div>
+    </form>
+</body>
+</html>

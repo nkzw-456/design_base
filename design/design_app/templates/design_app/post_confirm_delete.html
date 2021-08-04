@@ -1,0 +1,49 @@
+{% load static %}
+{% load widget_tweaks %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'edit.css' %}">
+    <title>削除ページ</title>
+</head>
+<body>
+    <div class="main">
+        <div class="top-bar">
+            <a href="{% url 'index' %}">キャンセル</a>
+        </div>
+
+        <div class='image-cicle'>
+            <div class='circle'></div>
+            <a href='#' class="circle-text">写真を追加</a>
+        </div>
+
+        <div>
+            <div class='del_list'>{{ object.first_name }}</div>
+            <div class='del_list'>{{ object.first_name_kana }}</div>
+            <div class='del_list'>{{ object.last_name }}</div>
+            <div class='del_list'>{{ object.last_name_kana }}</div>
+            <div class='del_list'>{{ object.call_num }}</div>
+            <div class='del_list'>{{ object.address }}</div>
+            <div class='del_list'>{{ object.memo }}</div>
+
+            <div class="paragraph"></div>
+            
+            <form method="Post">
+                <div class="delete_container">
+                    {% csrf_token %}
+                    <div>本当に {{ post.first_name }} {{ post.last_name }} を削除しますか？
+                    <input type="submit" value="削除"></div>
+                </div>
+
+                <div class="paragraph"></div>
+            </form>
+
+        </div>
+        
+    </div>
+</body>
+</html>

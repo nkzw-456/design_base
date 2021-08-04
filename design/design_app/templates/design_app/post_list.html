@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,28 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "{% static 'index.css' %}">
-    <title>Document</title>
+    <title>電話帳一覧</title>
 </head>
 <body>
     <div class="main">
         <div class="top">
-            <div class="new-add"><a href="#">+</a></div>
+            <div class="new-add"><a href="{% url 'create' %}">新規登録</a></div>
             <div class="top-text">連絡先</div>
-            <div class="search">検索</div>
+            <form action="" method="get">
+                <input class="text" name="query" value="{{ request.GET.query }}" type="text" placeholder="名前を検索">
+                <button type="submit">検索</button>
+            </form>
         </div>
         <div class="spacer"></div>
         <div class="partition"></div>
 
         <div class="num-list">
-            <a>aaa</a>
+            {% for member in object_list %}
+            <a class="column_a" href="{% url 'detail' member.id %}">{{ member.first_name }} {{ member.last_name }}</a>
+            {% endfor %}
         </div>
     </div>
 
     <div class="footer"></div>
-    
-
-    
-
-
-</body>
-</html>
